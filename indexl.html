@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <script src="js/jquery.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <header>
+        <div class="header-memberLine">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-6">
+                        <span>OOOO님 환영합니다</span>
+                    </div>
+                    <div class="col-xs-6">
+                        <ul class="memberMenu">
+                            <li>로그인</li>
+                            <li>회원가입</li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <nav class="nav-mainMenu">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-2">
+                        <h1><span>미술경매</span></h1>
+                    </div>
+                    <div class="col-xs-10">
+                        <ul class="mainMenu">
+                            <li><span>매물보기</span></li>
+                            <li><span>경매안내</span></li>
+                            <li><span>미술이란</span></li>
+                            <li><span>마이페이지</span></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <section>
+
+        <div class="container">
+            <button type="button" class="btn btn-default" id="bidding">입찰하기</button>
+
+            <!-- Modal -->
+            <div class="modal fade" id="biddingModal" role="dialog">
+                <div class="modal-dialog">
+
+                    <!-- Modal content-->
+                    <div class="modal-content modal-bidding">
+
+                        <!-- 입찰모달창 header-->
+                        <div class="modal-header modal-bidding-header">
+                            <h4><span id="deadline">마감: 2일 1시간 15분 35초 전</span></h4>
+                        </div>
+
+                        <!-- 입찰모달창 body-->
+                        <div class="modal-body modal-bidding-body">
+
+                            <div class="bidding-history-wrap">                            
+ 
+                                <div class="bidding-history">
+                                    <table>
+                                        <thead>
+                                            <tr>
+                                                <th class="history-id"></th>
+                                                <th class="history-date"></th>
+                                                <th class="history-highprice"></th>
+                                                <th class="history-price"></th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td class="history-id">test1***</td>
+                                                <td class="history-date">2019/05/14 17:33.070</td>
+                                                <td class="history-highprice high">최고가</td>
+                                                <td class="history-price">250,000,000</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="history-id">test2***</td>
+                                                <td class="history-date">2019/05/14 17:33.070</td>
+                                                <td class="history-highprice"></td>
+                                                <td class="history-price">250,000,000</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="history-id">test3***</td>
+                                                <td class="history-date">2019/05/14 17:33.070</td>
+                                                <td class="history-highprice"></td>
+                                                <td class="history-price">250,000,000</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="history-id">test4***</td>
+                                                <td class="history-date">2019/05/14 17:33.070</td>
+                                                <td class="history-highprice"></td>
+                                                <td class="history-price">250,000,000</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="history-id">test5***</td>
+                                                <td class="history-date">2019/05/14 17:33.070</td>
+                                                <td class="history-highprice"></td>
+                                                <td class="history-price">250,000,000</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="history-id">test6***</td>
+                                                <td class="history-date">2019/05/14 17:33.070</td>
+                                                <td class="history-highprice"></td>
+                                                <td class="history-price">250,000,000</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="history-id">test7***</td>
+                                                <td class="history-date">2019/05/14 17:33.070</td>
+                                                <td class="history-highprice"></td>
+                                                <td class="history-price">250,000,000</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            
+                                <div class="bidding-state-wrap">
+                                    <div class="price-state">
+                                        <ul>
+                                            <li>시작가 <span>100만원</span></li>
+                                            <li>현재가 <span>250만원</span><span>(7회 입찰)</span></li>
+                                        </ul>
+                                    </div>
+                                    <div class="fee-state">
+                                        <ul>
+                                            <li><a href="#" class="fee-state-tooltip" data-toggle="tooltip" data-placement="bottom" data-html="true" title="<ul class='tooltip-message'><li class='tooltip-title'>기본 배송지 기준</li><li><span>5000원<span></li></ul>">예상 배송비 안내</a></li>
+                                            <li><a href="#" class="fee-state-tooltip" data-toggle="tooltip" data-placement="bottom" data-html="true" title="<ul class='tooltip-message'><li class='tooltip-title'>현재가 기준</li><li><span>550,000원<span></li></ul>">낙찰 수수료 안내</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <div class="bidding-form">
+                                    <form action="">
+                                        <div class="bid-line">
+                                            입찰가 <input type="number" class="bid-price"> 원
+                                        </div>
+                                        <button type="button" class="btn btn-default btn-block btn-bid">0원 입찰하기</button>
+                                    </form>
+                                </div>
+                            </div>   
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <script>
+        $(document).ready(function () {
+            $("#bidding").click(function () {
+                $("#biddingModal").modal();
+            });
+
+
+            $('[data-toggle="tooltip"]').tooltip(); 
+
+
+                    //선택자 수정필요!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+            $(".bid-price").on('input', function() {
+                $(".btn-bid").html($(this).val() + "원 입찰하기");
+            } )
+        });
+
+
+    </script>
+
+    <footer>
+        <div class="container">
+            <div class="row companyTotalInfo">
+                <div class="col-xs-6">
+                    <div class="companyInfo">
+                        <h4>미술경매 유한책임회사</h4>
+                        <span>서울시 강남구 테헤란로 7길 7 (역삼동) 중앙정보기술인재개발원</span>
+                        <span>개인정보 책임 관리자 : 무책임</span>
+                        <span>통신판매업신고: 강남 00000호</span>
+                        <span><a href="#">이용약관보기</a></span>
+                    </div>
+                </div>
+                <div class="col-xs-6">
+                    <div class="companyServiceCenter">
+                        <h4>고객센터</h4>
+                        <span>TEL 1234-5678</span>
+                        <span>FAX 02-123-4567</span>
+                        <span>MAIL webmaster@mijeong.com</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row copyright">
+                <div class="col-xs-12">
+                    <div>
+                        <span>Copyright(c) 미술경매 LLC All rights reserved</span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </footer>
+</body>
+
+</html>
